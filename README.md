@@ -35,4 +35,40 @@ web viewer that displays a sample processed frame.
 
 ---
 
-## 🛠️ Project Structure
+
+## 📁 Project Structure
+
+MyApplication/
+│
+├── app/
+│ ├── src/main/
+│ │ ├── cpp/ # C++ OpenCV + JNI native code
+│ │ │ ├── CMakeLists.txt
+│ │ │ └── native-lib.cpp
+│ │ │
+│ │ ├── java/com/example/myapplication/
+│ │ │ ├── MainActivity.kt
+│ │ │ ├── MyGLSurfaceView.kt
+│ │ │ ├── MyGLRenderer.java
+│ │ │ ├── MyNativeLib.java
+│ │ │ └── ui/theme/
+│ │ │ ├── Color.kt
+│ │ │ ├── Theme.kt
+│ │ │ └── Type.kt
+│ │ │
+│ │ ├── res/ # Android resources (layouts, icons, XML)
+│ │ └── AndroidManifest.xml
+│ │
+│ └── build.gradle
+│
+├── web/ # TypeScript-based web viewer
+│ ├── dist/main.js
+│ ├── index.html
+│ ├── main.ts
+│ ├── style.css
+│ ├── sample.png # exported processed frame from Android
+│ ├── package.json
+│ └── package-lock.json
+│
+├── .gitignore
+└── README.md
