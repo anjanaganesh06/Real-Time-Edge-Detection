@@ -33,45 +33,59 @@ web viewer that displays a sample processed frame.
 - Displays FPS + resolution (browser simulated FPS)
 - Built with TypeScript → ES6
 
----
-
-
-
 ## 📁 Project Structure
 
-
-
+```
 MyApplication/
 │
 ├── app/
-│ ├── src/main/
-│ │ ├── cpp/ # C++ OpenCV + JNI native code
-│ │ │ ├── CMakeLists.txt
-│ │ │ └── native-lib.cpp
-│ │ │
-│ │ ├── java/com/example/myapplication/
-│ │ │ ├── MainActivity.kt
-│ │ │ ├── MyGLSurfaceView.kt
-│ │ │ ├── MyGLRenderer.java
-│ │ │ ├── MyNativeLib.java
-│ │ │ └── ui/theme/
-│ │ │ ├── Color.kt
-│ │ │ ├── Theme.kt
-│ │ │ └── Type.kt
-│ │ │
-│ │ ├── res/ # Android resources (layouts, icons, XML)
-│ │ └── AndroidManifest.xml
-│ │
-│ └── build.gradle
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── cpp/                          # Native C++ (JNI + OpenCV)
+│   │   │   │   ├── CMakeLists.txt
+│   │   │   │   └── native-lib.cpp
+│   │   │   │
+│   │   │   ├── java/com/example/myapplication/  # Android app source
+│   │   │   │   ├── MainActivity.kt
+│   │   │   │   ├── MyGLSurfaceView.kt
+│   │   │   │   ├── MyGLRenderer.java
+│   │   │   │   ├── MyNativeLib.java
+│   │   │   │   └── ui/theme/
+│   │   │   │       ├── Color.kt
+│   │   │   │       ├── Theme.kt
+│   │   │   │       └── Type.kt
+│   │   │   │
+│   │   │   ├── res/                          # Android resources
+│   │   │   │   ├── drawable/
+│   │   │   │   ├── layout/
+│   │   │   │   ├── mipmap-anydpi-v26/
+│   │   │   │   ├── mipmap-hdpi/
+│   │   │   │   ├── mipmap-mdpi/
+│   │   │   │   ├── mipmap-xhdpi/
+│   │   │   │   ├── mipmap-xxhdpi/
+│   │   │   │   ├── mipmap-xxxhdpi/
+│   │   │   │   ├── values/
+│   │   │   │   └── xml/
+│   │   │   │
+│   │   │   ├── AndroidManifest.xml
+│   │   │   └── main.iml
+│   │   │
+│   │   └── test/ (if any)
+│   │
+│   ├── build.gradle
+│   └── (other Gradle files)
 │
-├── web/ # TypeScript-based web viewer
-│ ├── dist/main.js # compiled TypeScript
-│ ├── index.html
-│ ├── main.ts
-│ ├── style.css
-│ ├── sample.png # exported processed frame
-│ ├── package.json
-│ └── package-lock.json
+├── web/                                      # TypeScript Web Viewer
+│   ├── dist/
+│   │   └── main.js                           # compiled JS bundle
+│   │
+│   ├── index.html
+│   ├── main.ts                               # TypeScript source
+│   ├── style.css
+│   ├── sample.png                            # exported processed frame
+│   ├── package.json
+│   └── package-lock.json
 │
 ├── .gitignore
-└── README.md # main project readme
+└── README.md                                 # main project readme
+```
