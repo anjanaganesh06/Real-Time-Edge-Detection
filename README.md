@@ -36,56 +36,42 @@ web viewer that displays a sample processed frame.
 ---
 
 
+
 ## 📁 Project Structure
+
+
 
 MyApplication/
 │
 ├── app/
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── cpp/
-│   │   │   │   ├── CMakeLists.txt
-│   │   │   │   └── native-lib.cpp
-│   │   │   │
-│   │   │   ├── java/
-│   │   │   │   └── com/example/myapplication/
-│   │   │   │       ├── MyGLRenderer.java
-│   │   │   │       ├── MyNativeLib.java
-│   │   │   │       ├── MyGLSurfaceView.kt
-│   │   │   │       ├── MainActivity.kt
-│   │   │   │       ├── ui/theme/
-│   │   │   │       │   ├── Color.kt
-│   │   │   │       │   ├── Theme.kt
-│   │   │   │       │   └── Type.kt
-│   │   │   │       └── (other Android source files)
-│   │   │   │
-│   │   │   ├── res/
-│   │   │   │   ├── drawable/
-│   │   │   │   ├── layout/
-│   │   │   │   ├── mipmap-*/  
-│   │   │   │   ├── values/
-│   │   │   │   └── xml/
-│   │   │   │
-│   │   │   ├── AndroidManifest.xml
-│   │   │   └── main.iml
-│   │   │
-│   │   └── (test folders etc.)
-│   │
-│   ├── build.gradle
-│   └── (other Gradle files)
+│ ├── src/main/
+│ │ ├── cpp/ # C++ OpenCV + JNI native code
+│ │ │ ├── CMakeLists.txt
+│ │ │ └── native-lib.cpp
+│ │ │
+│ │ ├── java/com/example/myapplication/
+│ │ │ ├── MainActivity.kt
+│ │ │ ├── MyGLSurfaceView.kt
+│ │ │ ├── MyGLRenderer.java
+│ │ │ ├── MyNativeLib.java
+│ │ │ └── ui/theme/
+│ │ │ ├── Color.kt
+│ │ │ ├── Theme.kt
+│ │ │ └── Type.kt
+│ │ │
+│ │ ├── res/ # Android resources (layouts, icons, XML)
+│ │ └── AndroidManifest.xml
+│ │
+│ └── build.gradle
 │
-├── web/
-│   ├── dist/
-│   │   └── main.js            ← compiled TypeScript
-│   │
-│   ├── index.html
-│   ├── main.ts
-│   ├── style.css
-│   ├── sample.png             ← processed frame
-│   ├── package.json
-│   ├── package-lock.json
-│   └── README.md (optional for web folder)
+├── web/ # TypeScript-based web viewer
+│ ├── dist/main.js # compiled TypeScript
+│ ├── index.html
+│ ├── main.ts
+│ ├── style.css
+│ ├── sample.png # exported processed frame
+│ ├── package.json
+│ └── package-lock.json
 │
 ├── .gitignore
-├── README.md                  ← main project readme
-└── (Gradle wrapper, settings.gradle etc.)
+└── README.md # main project readme
