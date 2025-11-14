@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edge Detection Web Viewer</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<h2>Processed Frame Viewer</h2>
+
+<div id="viewer">
+    <img id="frame" src="" alt="Processed Frame" />
+    <div id="stats">
+        <p><strong>FPS:</strong> <span id="fps">0</span></p>
+        <p><strong>Resolution:</strong> <span id="resolution">0x0</span></p>
+    </div>
+</div>
+
+<script type="module" src="./dist/main.js"></script>
+</body>
+</html>
