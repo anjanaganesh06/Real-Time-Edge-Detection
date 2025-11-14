@@ -89,3 +89,32 @@ MyApplication/
 ├── .gitignore
 └── README.md                                 # main project readme
 ```
+## ⚙️ Setup Instructions
+
+### 1️⃣ Install Required Tools
+
+Make sure your Android Studio installation includes:
+
+- **Android NDK (r21 or newer)**
+- **CMake**
+- **LLDB**
+- **Android SDK Platform-Tools**
+- **OpenCV Android SDK**
+
+  
+Enable:
+- Android NDK  
+- CMake  
+- LLDB  
+- Android SDK Build-Tools  
+- Android SDK Platform-Tools  
+
+---
+
+### 2️⃣ Download & Install OpenCV for Android
+
+Download OpenCV for Android:
+
+➡ https://opencv.org/releases/
+
+
